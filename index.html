@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hugues Vinzant</title>
+<meta name="description" content="PhD candidate in machine learning at the University of Geneva and HES-SO Genève. Reinforcement learning and low-dimensional representations of human movement.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hugues Vinzant">
+<meta property="og:description" content="Machine learning for human movement: reinforcement learning and low-dimensional representations of gait.">
+<meta property="og:url" content="https://huguesvinzant.github.io/">
+<!-- <meta property="og:image" content="https://huguesvinzant.github.io/og.png"> -->
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%232A55A3'/%3E%3Cpath d='M7 22 C9 11 15 6 19 9 C23 12 26 20 23 23 C19 26 12 25 7 22Z' fill='none' stroke='white' stroke-width='2.2'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;1,400&family=Instrument+Sans:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F2F4F3; --ink:#18211D; --muted:#56625D; --rule:#D3D9D6; --accent:#2A55A3;
+  --serif:"Spectral",Georgia,"Times New Roman",serif;
+  --sans:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#131715;--ink:#E3E8E5;--muted:#9AA6A1;--rule:#2C3430;--accent:#93B4EE;color-scheme:dark}
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.125rem/1.65 var(--serif);
+  padding:env(safe-area-inset-top,0px) 0 env(safe-area-inset-bottom,0px)}
+a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:.18em}
+a:hover{text-decoration-thickness:2px}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+.wrap{max-width:46rem;margin:0 auto;padding:0 1.5rem}
+
+/* Hero */
+.hero{display:grid;grid-template-columns:1fr 19rem;gap:2.5rem;align-items:center;padding:5.5rem 0 3.5rem}
+h1{font:600 2.7rem/1.08 var(--sans);letter-spacing:-.02em;margin:0 0 .35rem}
+.role{font:500 1rem/1.4 var(--sans);color:var(--muted);margin:0 0 1.25rem}
+.lede{font-size:1.25rem;line-height:1.5;margin:0 0 1.6rem;max-width:30rem}
+.links{font:500 .95rem var(--sans);display:flex;flex-wrap:wrap;gap:.45rem 1.2rem;margin:0;padding:0;list-style:none}
+.gait{display:block;width:100%;aspect-ratio:1}
+
+/* Sections */
+section{border-top:1px solid var(--rule);padding:2.4rem 0}
+h2{font:600 1.15rem/1.3 var(--sans);margin:0 0 1.1rem}
+p{margin:0 0 1rem}
+p:last-child{margin-bottom:0}
+.about{display:grid;grid-template-columns:1fr;gap:1.5rem}
+.about.with-photo{grid-template-columns:7rem 1fr}
+.photo{width:7rem;height:7rem;border-radius:50%;object-fit:cover}
+
+/* Entries: label column + content */
+.entries{list-style:none;margin:0;padding:0}
+.entries li{display:grid;grid-template-columns:6.5rem 1fr;gap:0 1rem;margin:0 0 1.3rem}
+.entries li:last-child{margin-bottom:0}
+.tag{font:500 .85rem/1.9 var(--sans);color:var(--muted)}
+.title{font-weight:500;display:block}
+.meta{color:var(--muted);font-size:1rem;display:block;line-height:1.55}
+.desc{display:block;font-size:1rem;line-height:1.55;margin-top:.2rem}
+.me{color:var(--ink);font-weight:500}
+.plinks{font:500 .85rem var(--sans);display:flex;flex-wrap:wrap;gap:.3rem 1rem;margin-top:.3rem}
+.note{color:var(--muted);font-size:1rem;margin-top:1.3rem}
+
+footer{border-top:1px solid var(--rule);padding:2rem 0 3rem;font:400 .9rem var(--sans);color:var(--muted)}
+
+@media (max-width:640px){
+  .hero{grid-template-columns:1fr;padding:3rem 0 2.25rem;gap:1.5rem}
+  .figure{max-width:17rem;margin:0 auto}
+  h1{font-size:2.15rem}
+  body{font-size:1.0625rem}
+  .entries li{grid-template-columns:1fr}
+  .about.with-photo{grid-template-columns:1fr}
+}
+@media print{.figure,.links{display:none}body{background:#fff;color:#000}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <div>
+    <h1>Hugues Vinzant</h1>
+    <p class="role">PhD candidate, University of Geneva and HES-SO Genève</p>
+    <p class="lede">I build machine learning models of human movement, with a focus on the low-dimensional structure behind how we walk.</p>
+    <ul class="links">
+      <li><a href="mailto:hugues.vinzant@hesge.ch">Email</a></li>
+      <li><a href="https://scholar.google.com/citations?user=MiNXexYAAAAJ">Google Scholar</a></li>
+      <li><a href="https://openreview.net/profile?id=~Hugues_Vinzant1">OpenReview</a></li>
+      <li><a href="https://orcid.org/0000-0002-0184-8818">ORCID</a></li>
+      <li><a href="https://github.com/huguesvinzant">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/hugues-vinzant/">LinkedIn</a></li>
+      <!-- <li><a href="cv.pdf">CV</a></li> -->
+    </ul>
+  </div>
+  <div class="figure">
+    <!-- Hip, knee and ankle angles traced as a continuous 3D trajectory. Synthetic, generated by the script at the bottom. -->
+    <canvas class="gait" id="gait" aria-hidden="true"></canvas>
+  </div>
+</header>
+
+<section id="about">
+  <h2>About</h2>
+  <!-- To add a photo: add class "with-photo" to the div below and uncomment the img (square image). -->
+  <div class="about">
+    <!-- <img class="photo" src="photo.jpg" alt="Hugues Vinzant"> -->
+    <div>
+      <p>I'm a PhD candidate in Computer Science at the University of Geneva, working between the <a href="https://www.hesge.ch/">DMML group at HES-SO Genève</a> and the <a href="https://www.unige.ch/medecine/kinesiology/">Kinesiology Laboratory (UNIGE/HUG)</a>. I'm supervised by Alexandros Kalousis, Stéphane Marchand-Maillet and Stéphane Armand, as part of the SNSF-funded <a href="https://www.unige.ch/medecine/kinesiology/projects1/current-projects/metathesis">Metathesis</a> project.</p>
+      <p>I'm also co-founder and CTO of <a href="https://a-go.ai">a-gO</a>, which builds 3D motion capture and movement analysis tools. I studied Life Science Engineering at EPFL.</p>
+    </div>
+  </div>
+</section>
+
+<section id="research">
+  <h2>Research</h2>
+  <p>Human movement involves hundreds of muscles and dozens of joints, yet what we actually do with them is highly structured. I try to learn that structure and use it in two directions.</p>
+  <p><strong>Control.</strong> Muscle synergies as a low-dimensional action space for reinforcement learning in physics-based musculoskeletal models.</p>
+  <p><strong>Clinical prediction.</strong> Latent representations of gait that support treatment decisions for children with cerebral palsy.</p>
+</section>
+
+<!-- ON ACCEPTANCE: uncomment this section and fill in
+<section id="news">
+  <h2>News</h2>
+  <ul class="entries">
+    <li><span class="tag">Jan 2027</span><span>PAPER_SHORT_NAME accepted at ICLR 2027.</span></li>
+  </ul>
+</section>
+-->
+
+<section id="publications">
+  <h2>Publications</h2>
+  <!-- Loaded from ORCID when the page opens (settings in the PUBS block of the script at the bottom).
+       The entry below is shown until ORCID responds, and stays if ORCID is unreachable. -->
+  <ul class="entries" id="pub-list">
+    <li>
+      <span class="tag">ACCV 2022</span>
+      <span>
+        <span class="title">3D Pose Based Feedback for Physical Exercises</span>
+        <span class="meta">Ziyi Zhao, Sena Kiciroglu, <span class="me">Hugues Vinzant</span>, Yuan Cheng, Isinsu Katircioglu, Mathieu Salzmann, Pascal Fua</span>
+        <span class="plinks"><a href="https://openaccess.thecvf.com/content/ACCV2022/html/Zhao_3D_Pose_Based_Feedback_For_Physical_Exercises_ACCV_2022_paper.html">Paper</a><a href="https://arxiv.org/abs/2208.03257">arXiv</a></span>
+      </span>
+    </li>
+  </ul>
+  <p class="note">Full list on <a href="https://scholar.google.com/citations?user=MiNXexYAAAAJ">Google Scholar</a>.</p>
+</section>
+
+<section id="talks">
+  <h2>Talks and demos</h2>
+  <ul class="entries">
+    <li><span class="tag">2025, 2026</span>
+      <span>
+        <span class="title">Modelling Pathological Gait for Treatment–Selection Support</span>
+        <span class="meta">AI for Good, Geneva</span>
+        <span class="desc">Talk, plus a booth with a poster and a live demo, presented two years in a row.</span>
+      </span>
+    </li>
+    <li><span class="tag">2025</span>
+      <span>
+        <span class="title">Gait Phase Importance in Affected Side Prediction for Cerebral Palsy via Gradient-Based Analysis</span>
+        <span class="meta">ESMAC 2025, Basel. Oral presentation.</span>
+        <span class="meta">Joao Antonio Candido Ramos, <span class="me">Hugues Vinzant</span>, Lionel Blondé, Stéphane Armand, Alexandros Kalousis</span>
+        <span class="plinks"><a href="https://doi.org/10.1016/j.gaitpost.2025.07.285">Abstract</a></span>
+      </span>
+    </li>
+    <li><span class="tag">2025</span>
+      <span>
+        <span class="title">Leveraging Virtual Reality and AI-Driven Movement Analysis to Identify Early Neurocognitive Decline in Aging</span>
+        <span class="meta">CIREVE summer school “Virtual Reality in Health and Sport”, Caen</span>
+      </span>
+    </li>
+  </ul>
+</section>
+
+<section id="reviewing">
+  <h2>Reviewing</h2>
+  <ul class="entries">
+    <li><span class="tag">Conferences</span><span>ICLR 2027</span></li>
+    <li><span class="tag">Journals</span><span>Scientific Reports (2026)</span></li>
+  </ul>
+</section>
+
+<section id="teaching">
+  <h2>Teaching, supervision and training</h2>
+  <ul class="entries">
+    <li><span class="tag">Since 2024</span>
+      <span><span class="title">Introduction to Machine Learning, HEG Genève</span>
+      <span class="desc">I run the practicals, built around a group project.</span></span>
+    </li>
+    <li><span class="tag">Since 2023</span>
+      <span><span class="title">Industrial co-supervisor of a CIFRE PhD thesis</span>
+      <span class="desc">With a-gO and the Université de Caen Normandie.</span></span>
+    </li>
+    <li><span class="tag">2025</span>
+      <span><span class="title">Co-organiser, CIREVE summer school “Virtual Reality in Health and Sport”</span>
+      <span class="desc">First international edition, Caen, on immersive technologies for assessment, rehabilitation and performance. I also gave a talk and demonstrated a-gO’s movement analysis tools.</span></span>
+    </li>
+    <li><span class="tag">In preparation</span>
+      <span><span class="title">Inter-university diploma in gait control analysis</span>
+      <span class="desc">Co-designing, through a-gO, the Caen module of a diploma for physiotherapists and rehabilitation clinicians, where I will teach a-gO’s methods.</span></span>
+    </li>
+    <li><span class="tag">2019–2020</span>
+      <span><span class="title">Teaching assistant, EPFL</span>
+      <span class="desc">Introduction to machine learning for bioengineers.</span></span>
+    </li>
+  </ul>
+</section>
+
+<footer>
+  <p>Geneva, Switzerland. Last updated November 2026.</p>
+</footer>
+
+</div>
+
+<script>
+/* ---------- Publications, loaded in the browser from the public ORCID API ---------- */
+const PUBS = {
+  orcid: "0000-0002-0184-8818",      // your ORCID iD
+  excludeTitles: [],                  // substrings of titles to hide
+  overrides: [                        // fixes matched on a title substring
+    { match: "3D Pose Based Feedback", tag: "ACCV 2022",
+      url: "https://openaccess.thecvf.com/content/ACCV2022/html/Zhao_3D_Pose_Based_Feedback_For_Physical_Exercises_ACCV_2022_paper.html",
+      arxiv: "https://arxiv.org/abs/2208.03257" }
+  ],
+  manual: [                           // papers not on ORCID yet (e.g. just accepted)
+    // { title: "PAPER_TITLE", year: 2027, tag: "ICLR 2027", authors: ["Hugues Vinzant", "COAUTHOR"], openreview: "OPENREVIEW_URL" }
+  ]
+};
+
+(function(){
+  const API = "https://pub.orcid.org/v3.0/" + PUBS.orcid;
+  const list = document.getElementById('pub-list');
+  const norm = s => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+  const v = (o, ...path) => path.reduce((x, k) => (x && typeof x === "object") ? x[k] : undefined, o);
+  const get = url => fetch(url, { headers: { Accept: "application/json" } }).then(r => r.ok ? r.json() : Promise.reject(r.status));
+  const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
+
+  async function load() {
+    const summary = await get(API + "/works");
+    const codes = (summary.group || []).map(g => v(g, "work-summary", 0, "put-code")).filter(Boolean);
+    const works = [];
+    for (let i = 0; i < codes.length; i += 100) {
+      const bulk = await get(API + "/works/" + codes.slice(i, i + 100).join(","));
+      (bulk.bulk || []).forEach(b => b.work && works.push(b.work));
+    }
+    let pubs = works.map(w => {
+      const ids = {};
+      (v(w, "external-ids", "external-id") || []).forEach(e => { ids[e["external-id-type"]] ??= e["external-id-value"]; });
+      const year = v(w, "publication-date", "year", "value");
+      return {
+        title: v(w, "title", "title", "value"),
+        year: year ? +year : null,
+        venue: v(w, "journal-title", "value"),
+        authors: (v(w, "contributors", "contributor") || []).map(c => v(c, "credit-name", "value")).filter(Boolean),
+        url: ids.doi ? "https://doi.org/" + ids.doi : v(w, "url", "value"),
+        arxiv: ids.arxiv ? "https://arxiv.org/abs/" + ids.arxiv.replace(/^arxiv:/i, "") : null
+      };
+    }).filter(p => p.title && !PUBS.excludeTitles.some(x => norm(p.title).includes(norm(x))));
+    PUBS.overrides.forEach(o => pubs.forEach(p => { if (norm(p.title).includes(norm(o.match))) { const { match, ...rest } = o; Object.assign(p, rest); } }));
+    const mk = new Set(PUBS.manual.map(m => norm(m.title)));
+    pubs = pubs.filter(p => !mk.has(norm(p.title))).concat(PUBS.manual);
+    const seen = new Set();
+    return pubs.filter(p => !seen.has(norm(p.title)) && seen.add(norm(p.title))).sort((a, b) => (b.year || 0) - (a.year || 0));
+  }
+
+  function render(pubs) {
+    list.replaceChildren();
+    pubs.forEach(p => {
+      const li = el('li');
+      li.append(el('span', 'tag', p.tag || [p.venue, p.year].filter(Boolean).join(' ')));
+      const body = el('span');
+      body.append(el('span', 'title', p.title));
+      if (p.authors && p.authors.length) {
+        const meta = el('span', 'meta');
+        p.authors.forEach((a, i) => { if (i) meta.append(', '); meta.append(/vinzant/i.test(a) ? el('span', 'me', a) : a); });
+        body.append(meta);
+      }
+      const links = el('span', 'plinks');
+      for (const [label, key] of [['Paper','url'],['arXiv','arxiv'],['OpenReview','openreview'],['Code','code'],['Project page','project']])
+        if (p[key]) { const a = el('a', null, label); a.href = p[key]; links.append(a); }
+      if (links.childNodes.length) body.append(links);
+      li.append(body);
+      list.append(li);
+    });
+  }
+
+  load().then(p => { if (p.length) render(p); }).catch(() => {});   // on any failure, the static list stays
+})();
+
+/* ---------- 3D gait trajectory (hip, knee, ankle) ---------- */
+(function(){
+  const cv = document.getElementById('gait');
+  if (!cv || !cv.getContext) return;
+  const ctx = cv.getContext('2d');
+
+  const STRIDE = 1.5;          // seconds per stride
+  const TRAIL  = 6;            // strides kept behind the pen
+  const FADE   = 1.1;          // brightness falls by e^-FADE per stride of age
+  const STEPS  = 150;          // samples per stride
+  const ROT    = 2*Math.PI/45; // one turn every 45 s
+  const TILT   = .5, SCALE = 1/42;
+
+  const g = (t, mu, s) => [-1,0,1].reduce((a,k) => a + Math.exp(-((t-mu+k)**2)/(2*s*s)), 0);
+  // Slow, smooth, non-repeating variation from stride to stride
+  const wob = (u, f1, f2, p) => Math.sin(u*f1 + p) * .6 + Math.sin(u*f2 + 2.1*p) * .4;
+
+  // Joint angles at time u (in strides); returns centred [hip, knee, ankle]
+  function pose(u){
+    const t = u - Math.floor(u);
+    const a = 1 + .18*wob(u, .71, .29, 0),  b = 1 + .2*wob(u, .53, .37, 1.3), c = 1 + .28*wob(u, .61, .23, 2.6);
+    const oh = 8*wob(u, .43, .19, .7), ok = 8*wob(u, .39, .31, 3.1), oa = 7*wob(u, .47, .17, 4.2);
+    const ph = .03*wob(u, .33, .21, 5.0);
+    const hip   = 19*a*Math.cos(2*Math.PI*(t+ph)) + oh;
+    const knee  = 4 + 12*b*g(t,.14+ph,.07) + 56*b*g(t,.71+ph,.12) - 33 + ok;
+    const ankle = 6 - 6*g(t,.06+ph,.04) + 10*c*g(t,.42+ph,.12) - 22*c*g(t,.63+ph,.05) + oa;
+    return [hip, knee, ankle];
+  }
+  function project([x,y,z], theta, R){
+    const ct = Math.cos(theta), st = Math.sin(theta);
+    const x1 = x*ct + z*st, z1 = -x*st + z*ct;
+    const y1 = y*Math.cos(TILT) - z1*Math.sin(TILT);
+    return [R + x1*SCALE*R, R - y1*SCALE*R];
+  }
+
+  let size = 0, dpr = 1, rgb = [42,85,163];
+  function readColor(){
+    const hex = getComputedStyle(document.documentElement).getPropertyValue('--accent').trim().replace('#','');
+    if (hex.length === 6) rgb = [0,2,4].map(i => parseInt(hex.slice(i,i+2),16));
+  }
+  function resize(){
+    dpr = window.devicePixelRatio || 1;
+    size = cv.clientWidth;
+    cv.width = Math.round(size*dpr); cv.height = Math.round(size*dpr);
+  }
+  readColor(); resize();
+  new ResizeObserver(resize).observe(cv);
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', readColor);
+
+  function draw(u, theta){
+    const R = size/2;
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+    ctx.clearRect(0,0,size,size);
+    ctx.lineCap = 'butt'; ctx.lineJoin = 'round';
+    const n = TRAIL*STEPS, CH = 3;                    // draw in short chunks, each with its own brightness
+    const pts = [];
+    for (let i = 0; i <= n; i++) pts.push(project(pose(u - TRAIL + i/STEPS), theta, R));
+    for (let i = 0; i < n; i += CH){
+      const age = (n - i - CH/2)/STEPS;               // strides behind the pen
+      const w = Math.exp(-FADE*age);                  // 1 at the pen, fading behind it
+      ctx.strokeStyle = `rgba(${rgb[0]},${rgb[1]},${rgb[2]},${w.toFixed(3)})`;
+      ctx.lineWidth = .6 + 1.6*w;
+      ctx.beginPath(); ctx.moveTo(pts[i][0], pts[i][1]);
+      for (let j = i+1; j <= Math.min(n, i+CH); j++) ctx.lineTo(pts[j][0], pts[j][1]);
+      ctx.stroke();
+    }
+    const prev = pts[n];
+    ctx.fillStyle = `rgb(${rgb[0]},${rgb[1]},${rgb[2]})`;
+    ctx.beginPath(); ctx.arc(prev[0], prev[1], 2.6, 0, 2*Math.PI); ctx.fill();
+  }
+
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches){ draw(TRAIL + .62, .7); return; }
+  const t0 = performance.now();
+  (function loop(now){
+    const s = Math.max(0, now - t0)/1000;
+    draw(TRAIL + s/STRIDE, .7 + s*ROT);
+    requestAnimationFrame(loop);
+  })(t0);
+})();
+</script>
+</body>
+</html>
