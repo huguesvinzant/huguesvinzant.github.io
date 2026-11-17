@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<script>document.documentElement.classList.add("js")</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Hugues Vinzant</title>
 <meta name="description" content="PhD candidate in machine learning at the University of Geneva and HES-SO Genève. Reinforcement learning and low-dimensional representations of human movement.">
@@ -14,12 +15,17 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%232A55A3'/%3E%3Cpath d='M7 22 C9 11 15 6 19 9 C23 12 26 20 23 23 C19 26 12 25 7 22Z' fill='none' stroke='white' stroke-width='2.2'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;1,400&family=Instrument+Sans:wght@500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;1,400&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
+/* Nove by Fabrizio Schiavi (FSD), licensed. Subset of the glyphs this page uses, embedded as WOFF2. */
+@font-face{font-family:"Nove";src:url(data:font/woff2;base64,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) format("woff2");font-weight:400;font-style:normal;font-display:swap}
 :root{
-  --bg:#F2F4F3; --ink:#18211D; --muted:#56625D; --rule:#D3D9D6; --accent:#2A55A3; --accent-hot:#1257F0; --accent-hot:#1257F0;
+  --bg:#F2F4F3; --ink:#18211D; --muted:#56625D; --rule:#D3D9D6; --accent:#2A55A3; --accent-hot:#1257F0;
   --serif:"Spectral",Georgia,"Times New Roman",serif;
   --sans:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:var(--sans);
+  --display:"Nove",var(--sans);
+  
   color-scheme:light;
 }
 @media (prefers-color-scheme:dark){
@@ -32,33 +38,62 @@ body{margin:0;background:var(--bg);color:var(--ink);font:400 1.125rem/1.65 var(-
 a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:.18em}
 a:hover{text-decoration-thickness:2px}
 a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
-.wrap{max-width:46rem;margin:0 auto;padding:0 1.5rem}
+.wrap{max-width:59rem;margin:0 auto;padding:0 1.5rem}
 
 /* Hero */
-.hero-wrap{max-width:82rem;margin:0 auto;padding:0 1.5rem}
-.hero{display:grid;grid-template-columns:minmax(0,28rem) minmax(0,1fr);gap:2rem;align-items:center;padding:4rem 0 3rem;min-height:min(78vh,44rem)}
+.hero-band{--bg:#0C110F;--ink:#EEF2EF;--muted:#9FABA6;--rule:#26302B;--accent:#86A9F5;--accent-hot:#D2E1FF;
+  position:relative;overflow:hidden;background:var(--bg);color:var(--ink);color-scheme:dark;
+  background-image:radial-gradient(circle at 70% 50%,color-mix(in srgb,var(--accent) 16%,transparent) 0,transparent 42%)}
+.hero-wrap{max-width:82rem;margin:0 auto;padding:0 1.5rem;position:relative}
+
+.hero{display:grid;grid-template-columns:minmax(0,28rem) minmax(0,1fr);gap:2rem;align-items:center;padding:4rem 0;min-height:100svh}
 .hero .text{max-width:30rem}
-.hero{padding-left:calc((min(100vw - 3rem, 82rem) - min(100vw - 3rem, 46rem))/2)}
-h1{font:600 clamp(2.6rem,6vw,4.6rem)/1 var(--sans);letter-spacing:-.035em;margin:0 0 .9rem}
-.role{font:500 1.05rem/1.4 var(--sans);color:var(--muted);margin:0 0 1.5rem}
+.hero{padding-left:calc((min(100vw - 3rem, 82rem) - min(100vw - 3rem, 59rem))/2)}
+h1{font:400 clamp(3.2rem,7.5vw,6.2rem)/.9 var(--display);letter-spacing:0;margin:0 0 1.2rem}
+h1 .last{display:block;color:var(--accent)}
+.role{font:500 1rem/1.5 var(--sans);color:var(--muted);margin:0 0 1.6rem}
+.role span{display:block}
 .lede{font-size:1.35rem;line-height:1.5;margin:0 0 1.8rem;max-width:28rem}
-.links{font:500 .95rem var(--sans);display:flex;flex-wrap:wrap;gap:.45rem 1.2rem;margin:0;padding:0;list-style:none}
+.links{font:500 .9rem var(--sans);display:flex;flex-wrap:wrap;gap:.5rem;margin:0;padding:0;list-style:none}
+.links a{display:inline-block;padding:.32rem .85rem;border:1px solid var(--rule);border-radius:999px;color:var(--ink);text-decoration:none;transition:border-color .2s,background-color .2s,color .2s}
+.links a:hover{border-color:var(--accent);color:var(--accent);background:color-mix(in srgb,var(--accent) 8%,transparent)}
+.links li:first-child a{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.links li:first-child a:hover{background:var(--accent);border-color:var(--accent);color:var(--bg)}
 .figure{position:relative}
-.gait{display:block;width:100%;max-width:34rem;margin:0 auto;aspect-ratio:1;cursor:grab;touch-action:pan-y}
+.hero-wrap{will-change:opacity}
+.gait{display:block;width:118%;max-width:46rem;margin:0 -9%;aspect-ratio:1;cursor:grab;touch-action:pan-y}
 .gait.dragging{cursor:grabbing}
+/* Reveal on scroll */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+section>h2{--f:0;color:color-mix(in srgb,var(--accent) calc(var(--f)*100%),var(--ink))}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}}
 /* Research threads with a small figure each */
-.thread{display:grid;grid-template-columns:9.5rem 1fr;gap:1.4rem;align-items:center;margin:1.6rem 0 0}
-.thread svg{width:100%;height:auto;display:block;overflow:visible}
+.thread{display:grid;grid-template-columns:15rem 1fr;gap:1.8rem;align-items:center;margin:2rem 0 0}
+.thread svg{width:100%;height:auto;display:block;overflow:visible;touch-action:none;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none}
+.thread svg text{pointer-events:none}
+.fig-link{stroke:var(--ink);stroke-width:.5;opacity:.45}
+.fig-hit{fill:transparent}
 .thread h3{font:600 1rem/1.3 var(--sans);margin:0 0 .35rem}
 .thread p{margin:0;font-size:1.05rem}
 .fig-strong{stroke:var(--accent);fill:none;stroke-width:1.8;stroke-linecap:round}
 .fig-faint{stroke:var(--accent);fill:none;stroke-width:.7;opacity:.35}
 .fig-dot{fill:var(--accent)}
-.fig-ring{fill:none;stroke:var(--ink);stroke-width:1.4}
+.fig-cell{fill:var(--accent)}
+.fig-cellbox{fill:none;stroke:var(--accent);stroke-width:.4}
+.fig-op{font:500 9px var(--sans);fill:var(--muted)}
+.fig-axis{fill:none;stroke:var(--muted);stroke-width:.5;opacity:.6}
+:root{--s1:#2A55A3;--s2:#E38B2C;--s3:#2E9E6E;--s4:#D2559F}
+@media (prefers-color-scheme:dark){:root{--s1:#93B4EE;--s2:#F0A65A;--s3:#5CC497;--s4:#E583BD}}
+.fig-wire{fill:none;stroke:var(--muted);stroke-width:.4;opacity:.35}
+.fig-ring{fill:none;stroke:var(--ink);stroke-width:1.2}
+.fig-base{stroke:var(--rule);stroke-width:.5}
+.fig-col{cursor:pointer}
 
 /* Sections */
-section{border-top:1px solid var(--rule);padding:2.4rem 0}
-h2{font:600 1.15rem/1.3 var(--sans);margin:0 0 1.1rem}
+section{padding:2.6rem 0;border-top:1px solid var(--rule)}
+
+h2{font:400 1.7rem/1.05 var(--display);letter-spacing:0;margin:0 0 1.1rem}
 p{margin:0 0 1rem}
 p:last-child{margin-bottom:0}
 .about{display:grid;grid-template-columns:1fr;gap:1.5rem}
@@ -77,29 +112,51 @@ p:last-child{margin-bottom:0}
 .plinks{font:500 .85rem var(--sans);display:flex;flex-wrap:wrap;gap:.3rem 1rem;margin-top:.3rem}
 .note{color:var(--muted);font-size:1rem;margin-top:1.3rem}
 
-footer{border-top:1px solid var(--rule);padding:2rem 0 3rem;font:400 .9rem var(--sans);color:var(--muted)}
+footer{border-top:1px solid var(--rule);padding:2rem 0 3rem;font:400 .9rem var(--sans);color:var(--muted);display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem 2rem}
+footer p{margin:0}
+/* Wide screens: section titles in their own column */
+@media (min-width:900px){
+  section{display:grid;grid-template-columns:10rem minmax(0,46rem);column-gap:2.5rem}
+  section>*{grid-column:2}
+  section>h2{grid-column:1;grid-row:1/span 20;align-self:start;position:sticky;top:1.5rem;margin:0;padding-top:.15rem}
+  /* research figures break out into the title column */
+  #research>h2{position:static}
+  #research .thread{margin-left:-12.5rem;grid-template-columns:25rem minmax(0,1fr);gap:2.5rem}
+}
 
 @media (max-width:640px){
-  .hero{grid-template-columns:1fr;padding:3rem 0 1.5rem;gap:.5rem;min-height:0}
-  .gait{max-width:22rem;margin:0 auto}
-  .thread{grid-template-columns:6.5rem 1fr;gap:1rem}
-  h1{font-size:2.15rem}
+  .hero{grid-template-columns:1fr;padding:3rem 0 4.5rem;gap:0;min-height:100svh;align-content:center}
+  .gait{width:100%;max-width:24rem;margin:0 auto}
+  .thread{grid-template-columns:1fr;gap:.8rem}
+  .thread svg{max-width:28rem}
+  h1{font-size:clamp(3.2rem,16vw,4.2rem)}
   body{font-size:1.0625rem}
   .entries li{grid-template-columns:1fr}
   .about.with-photo{grid-template-columns:1fr}
 }
+.cycle{position:fixed;left:1.25rem;bottom:1.25rem;z-index:5;font:400 .7rem/1.3 var(--mono);color:var(--muted);
+  background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+  border:1px solid var(--rule);border-radius:10px;padding:.55rem .7rem .5rem;opacity:0;transition:opacity .4s;pointer-events:none}
+.cycle.on{opacity:1}
+.cycle svg{display:block;width:8.5rem;height:2.4rem;overflow:visible}
+.cycle .curve{fill:none;stroke:var(--rule);stroke-width:1.5}
+.cycle .done{fill:none;stroke:var(--accent);stroke-width:1.5}
+.cycle circle{fill:var(--accent)}
+.cycle .lbl{display:flex;justify-content:space-between;gap:1rem;margin-top:.3rem}
+@media (max-width:640px){.cycle{left:auto;right:.75rem;bottom:.75rem}.cycle svg{width:6rem;height:1.8rem}}
 @media print{.figure,.links{display:none}body{background:#fff;color:#000}}
 </style>
 </head>
 <body>
+<div class="hero-band" id="hero-band">
 <div class="hero-wrap">
 <header class="hero">
   <div class="text">
-    <h1>Hugues Vinzant</h1>
-    <p class="role">PhD candidate, University of Geneva and HES-SO Genève</p>
-    <p class="lede">I build machine learning models of human movement, with a focus on the low-dimensional structure behind how we walk.</p>
+    <h1>Hugues <span class="last">Vinzant</span></h1>
+    <p class="role"><span>PhD candidate in machine learning, University of Geneva</span><span>Co-founder and CTO, a-gO</span></p>
+    <p class="lede">I develop machine learning methods for human movement, from reinforcement learning for musculoskeletal control to models of pathological gait that support clinical decisions.</p>
     <ul class="links">
-      <li><a href="mailto:hugues.vinzant@hesge.ch">Email</a></li>
+      <li><a class="js-mail" href="#contact">Email</a></li>
       <li><a href="https://scholar.google.com/citations?user=MiNXexYAAAAJ">Google Scholar</a></li>
       <li><a href="https://openreview.net/profile?id=~Hugues_Vinzant1">OpenReview</a></li>
       <li><a href="https://orcid.org/0000-0002-0184-8818">ORCID</a></li>
@@ -114,52 +171,45 @@ footer{border-top:1px solid var(--rule);padding:2rem 0 3rem;font:400 .9rem var(-
   </div>
 </header>
 </div>
+</div>
 
 <div class="wrap">
 
 
 
-<section id="about">
+<section id="about" data-phase="0">
   <h2>About</h2>
   <!-- To add a photo: add class "with-photo" to the div below and uncomment the img (square image). -->
   <div class="about">
     <!-- <img class="photo" src="photo.jpg" alt="Hugues Vinzant"> -->
     <div>
-      <p>I'm a PhD candidate in Computer Science at the University of Geneva, working between the <a href="https://www.hesge.ch/">DMML group at HES-SO Genève</a> and the <a href="https://www.unige.ch/medecine/kinesiology/">Kinesiology Laboratory (UNIGE/HUG)</a>. I'm supervised by Alexandros Kalousis, Stéphane Marchand-Maillet and Stéphane Armand, as part of the SNSF-funded <a href="https://www.unige.ch/medecine/kinesiology/projects1/current-projects/metathesis">Metathesis</a> project.</p>
-      <p>I'm also co-founder and CTO of <a href="https://a-go.ai">a-gO</a>, which builds 3D motion capture and movement analysis tools. I studied Life Science Engineering at EPFL.</p>
+      <p>I am a PhD candidate in Computer Science at the University of Geneva, working jointly with the <a href="https://www.hesge.ch/">Data Mining and Machine Learning group (DMML) at HES-SO Genève</a> and the <a href="https://www.unige.ch/medecine/kinesiology/">Kinesiology Laboratory of the University of Geneva and Geneva University Hospitals</a>. My doctoral work is supervised by Prof. Alexandros Kalousis, Prof. Stéphane Marchand-Maillet and Prof. Stéphane Armand, within the SNSF-funded <a href="https://www.unige.ch/medecine/kinesiology/projects1/current-projects/metathesis">Metathesis</a> project.</p>
+      <p>My research lies at the intersection of machine learning and biomechanics. Human movement is, in principle, a high-dimensional system: hundreds of muscles, dozens of joints and considerable variability between individuals. In practice, it is governed by a limited number of underlying patterns, and my work focuses on methods that identify and exploit them, including latent representations, muscle synergies and geometric approaches. I place equal emphasis on clinical relevance: a model of gait is only useful if it remains reliable on real patients and informs actual clinical decisions, not only in simulation.</p>
+      <p>In parallel, I co-founded <a href="https://a-go.ai">a-gO</a>, where I serve as Chief Technology Officer and lead the translation of gait research into a clinical product. The a-gO system relies on computer vision and markerless pose estimation to reconstruct gait from video, and on explainable AI to make the contribution of each aspect of gait to a given result transparent to clinicians. A five-minute walk on a standard treadmill, without wearables or electrodes, yields a motor signature of more than 200 gait parameters for the longitudinal monitoring of neurocognitive health. The same acquisition engine underlies <a href="https://a-go.ai/research">a-gO Research</a>, a multi-camera motion capture system for research laboratories.</p>
     </div>
   </div>
 </section>
 
-<section id="research">
+<section id="research" data-phase=".02">
   <h2>Research</h2>
-  <p>Human movement involves hundreds of muscles and dozens of joints, yet what we actually do with them is highly structured. I try to learn that structure and use it in two directions.</p>
+  <p>Walking poses a considerable control problem: hundreds of muscles and dozens of joints must be coordinated within fractions of a second. Yet the resulting behaviour is highly structured. My research develops machine learning methods that capture this structure and apply it in two complementary settings, physics-based simulation and clinical practice.</p>
   <div class="thread">
-    <svg id="fig-synergy" viewBox="0 0 160 110" aria-hidden="true"></svg>
+    <svg id="fig-synergy" viewBox="0 0 200 112" aria-hidden="true"></svg>
     <div>
-      <h3>Control</h3>
-      <p>Muscle synergies as a low-dimensional action space for reinforcement learning in physics-based musculoskeletal models. Many muscle activations, driven by a few shared patterns.</p>
+      <h3>Musculoskeletal control</h3>
+      <p>Controlling a full musculoskeletal model with reinforcement learning remains a difficult problem: each muscle constitutes an action dimension, and unstructured exploration rarely produces coordinated locomotion. I study muscle synergies as the action space of the agent: the policy acts on a small set of primitives that a weight matrix maps onto the full set of muscles. This formulation makes learning tractable and aligns the resulting control with prevailing hypotheses on how the nervous system organises movement.</p>
     </div>
   </div>
   <div class="thread">
     <svg id="fig-latent" viewBox="0 0 160 110" aria-hidden="true"></svg>
     <div>
       <h3>Clinical decision support</h3>
-      <p>Modelling pathological gait to support treatment selection for children with cerebral palsy, as part of the Metathesis project.</p>
+      <p>Treatment decisions for children with cerebral palsy, such as surgery, botulinum toxin injections or orthoses, rely heavily on clinical gait analysis, in which experts interpret dozens of joint-angle curves. In collaboration with the Kinesiology Laboratory at the Geneva University Hospitals, I develop latent representations of pathological gait: low-dimensional spaces in which patients with similar gait patterns lie close to one another. These representations make gait comparable across patients and provide a basis for supporting treatment selection.</p>
     </div>
   </div>
 </section>
 
-<!-- ON ACCEPTANCE: uncomment this section and fill in
-<section id="news">
-  <h2>News</h2>
-  <ul class="entries">
-    <li><span class="tag">Jan 2027</span><span>PAPER_SHORT_NAME accepted at ICLR 2027.</span></li>
-  </ul>
-</section>
--->
-
-<section id="publications">
+<section id="publications" data-phase=".12">
   <h2>Publications</h2>
   <!-- Loaded from ORCID when the page opens (settings in the PUBS block of the script at the bottom).
        The entry below is shown until ORCID responds, and stays if ORCID is unreachable. -->
@@ -176,14 +226,14 @@ footer{border-top:1px solid var(--rule);padding:2rem 0 3rem;font:400 .9rem var(-
   <p class="note">Full list on <a href="https://scholar.google.com/citations?user=MiNXexYAAAAJ">Google Scholar</a>.</p>
 </section>
 
-<section id="talks">
-  <h2>Talks and demos</h2>
+<section id="talks" data-phase=".31">
+  <h2>Talks</h2>
   <ul class="entries">
     <li><span class="tag">2025, 2026</span>
       <span>
         <span class="title">Modelling Pathological Gait for Treatment–Selection Support</span>
         <span class="meta">AI for Good, Geneva</span>
-        <span class="desc">Talk, plus a booth with a poster and a live demo, presented two years in a row.</span>
+        <span class="desc">Presentation, together with a booth, poster and live demonstration, in 2025 and 2026.</span>
       </span>
     </li>
     <li><span class="tag">2025</span>
@@ -203,20 +253,38 @@ footer{border-top:1px solid var(--rule);padding:2rem 0 3rem;font:400 .9rem var(-
   </ul>
 </section>
 
-<section id="reviewing">
-  <h2>Reviewing</h2>
+<section id="experience" data-phase=".50">
+  <h2>Experience</h2>
   <ul class="entries">
-    <li><span class="tag">Conferences</span><span>ICLR 2027</span></li>
-    <li><span class="tag">Journals</span><span>Scientific Reports (2026)</span></li>
+    <li><span class="tag">Since 2022</span>
+      <span><span class="title">Co-founder and CTO, a-gO</span>
+      <span class="desc">Computer vision, markerless pose estimation and explainable AI behind a gait-based motor signature of neurocognitive health, plus multi-camera motion capture for research labs.</span></span>
+    </li>
+    <li><span class="tag">2021</span>
+      <span><span class="title">Computer vision engineer, Quantum Integrity</span>
+      <span class="desc">Deep learning pipelines to detect manipulated images and documents.</span></span>
+    </li>
+    <li><span class="tag">2020–2021</span>
+      <span><span class="title">Master's thesis, EPFL Computer Vision Lab</span>
+      <span class="desc">3D pose-based feedback for physical exercises, with Pascal Fua. Published at ACCV 2022.</span></span>
+    </li>
+    <li><span class="tag">2020</span>
+      <span><span class="title">Machine learning intern, Metadvice</span>
+      <span class="desc">Combining clinical guidelines with machine learning for personalised clinical decisions.</span></span>
+    </li>
+    <li><span class="tag">2015–2021</span>
+      <span><span class="title">BSc and MSc in Life Science Engineering, EPFL</span>
+      <span class="desc">Minor in Biocomputing. Exchange year at Aalto University, Helsinki.</span></span>
+    </li>
   </ul>
 </section>
 
-<section id="teaching">
-  <h2>Teaching, supervision and training</h2>
+<section id="teaching" data-phase=".62">
+  <h2>Teaching</h2>
   <ul class="entries">
     <li><span class="tag">Since 2024</span>
       <span><span class="title">Introduction to Machine Learning, HEG Genève</span>
-      <span class="desc">I run the practicals, built around a group project.</span></span>
+      <span class="desc">Responsible for the practical sessions, organised around a group project.</span></span>
     </li>
     <li><span class="tag">Since 2023</span>
       <span><span class="title">Industrial co-supervisor of a CIFRE PhD thesis</span>
@@ -224,7 +292,7 @@ footer{border-top:1px solid var(--rule);padding:2rem 0 3rem;font:400 .9rem var(-
     </li>
     <li><span class="tag">2025</span>
       <span><span class="title">Co-organiser, CIREVE summer school “Virtual Reality in Health and Sport”</span>
-      <span class="desc">First international edition, Caen, on immersive technologies for assessment, rehabilitation and performance. I also gave a talk and demonstrated a-gO’s movement analysis tools.</span></span>
+      <span class="desc">First international edition, Caen, on immersive technologies for assessment, rehabilitation and performance. Also gave a talk and a demonstration of a-gO’s movement analysis tools.</span></span>
     </li>
     <li><span class="tag">2019–2020</span>
       <span><span class="title">Teaching assistant, EPFL</span>
@@ -233,13 +301,61 @@ footer{border-top:1px solid var(--rule);padding:2rem 0 3rem;font:400 .9rem var(-
   </ul>
 </section>
 
+<section id="reviewing" data-phase=".87">
+  <h2>Reviewing</h2>
+  <ul class="entries">
+    <li><span class="tag">Conferences</span><span>ICLR 2027</span></li>
+    <li><span class="tag">Journals</span><span>Scientific Reports (2026)</span></li>
+  </ul>
+</section>
+
 <footer>
-  <p>Geneva, Switzerland. Last updated November 2026.</p>
+  <p id="contact">Hugues Vinzant, Geneva. <a class="js-mail" href="#contact">Get in touch</a></p>
+  <p>Last updated November 2026</p>
 </footer>
 
 </div>
 
+<div class="cycle" id="cycle" aria-hidden="true"><svg viewBox="0 0 100 30" preserveAspectRatio="none"><path class="curve" id="cyc-curve"/><path class="done" id="cyc-done"/><circle id="cyc-dot" r="2.2"/></svg><div class="lbl"><span id="cyc-phase">initial contact</span><span id="cyc-pct">0%</span></div></div>
+
 <script>
+/* ---------- Email, assembled at runtime so the address isn't in the page source ---------- */
+(function(){
+  const addr = ['hugues.vinzant', 'hesge.ch'].join('@');
+  document.querySelectorAll('.js-mail').forEach(a => { a.href = 'mailto:' + addr; });
+})();
+
+/* ---------- Scroll position shown as a point in the gait cycle (knee flexion curve) ---------- */
+(function(){
+  const box = document.getElementById('cycle'); if (!box) return;
+  const g = (t, mu, s) => Math.exp(-((t-mu)**2)/(2*s*s));
+  const knee = t => 4 + 14*g(t,.14,.06) + 56*g(t,.71,.11) + 4*g(t,1.0,.06);
+  const X = t => t*100, Y = t => 28 - knee(t)/64*26;
+  const pts = Array.from({length: 101}, (_, i) => i/100);
+  const d = arr => arr.map((t, i) => (i ? 'L' : 'M') + X(t).toFixed(1) + ',' + Y(t).toFixed(1)).join('');
+  document.getElementById('cyc-curve').setAttribute('d', d(pts));
+  const done = document.getElementById('cyc-done'), dot = document.getElementById('cyc-dot');
+  const phase = document.getElementById('cyc-phase'), pct = document.getElementById('cyc-pct');
+  const names = [[0,'initial contact'],[.02,'loading response'],[.12,'mid stance'],[.31,'terminal stance'],[.5,'pre-swing'],[.62,'initial swing'],[.75,'mid swing'],[.87,'terminal swing']];
+  const secs = [...document.querySelectorAll('section[data-phase]')];
+  function update(){
+    // Each section starts at its gait phase; progress interpolates to the next section's phase (1 at the page end).
+    const docEnd = document.documentElement.scrollHeight, maxS = Math.max(1, docEnd - innerHeight);
+    const y = scrollY + innerHeight * (.35 + .65 * Math.min(1, scrollY / maxS));   // reading line slides down so the last sections are reachable
+    const tops = secs.map(s => s.getBoundingClientRect().top + scrollY).concat([docEnd]);
+    const phs = secs.map(s => +s.dataset.phase).concat([1]);
+    let p = 0;
+    for (let i = 0; i < secs.length; i++) if (y >= tops[i]) p = phs[i] + (phs[i+1] - phs[i]) * Math.min(1, (y - tops[i]) / (tops[i+1] - tops[i]));
+    if (scrollY + innerHeight >= docEnd - 2) p = 1;
+    box.classList.toggle('on', y >= tops[0]);
+    done.setAttribute('d', d(pts.filter(t => t <= p).concat([p])));
+    dot.setAttribute('cx', X(p)); dot.setAttribute('cy', Y(p));
+    phase.textContent = names.filter(n => n[0] <= p).pop()[1];
+    pct.textContent = Math.round(p*100) + '%';
+  }
+  addEventListener('scroll', update, { passive: true }); addEventListener('resize', update); update();
+})();
+
 /* ---------- Publications, loaded in the browser from the public ORCID API ---------- */
 const PUBS = {
   orcid: "0000-0002-0184-8818",      // your ORCID iD
@@ -249,8 +365,7 @@ const PUBS = {
       url: "https://openaccess.thecvf.com/content/ACCV2022/html/Zhao_3D_Pose_Based_Feedback_For_Physical_Exercises_ACCV_2022_paper.html",
       arxiv: "https://arxiv.org/abs/2208.03257" }
   ],
-  manual: [                           // papers not on ORCID yet (e.g. just accepted)
-    // { title: "PAPER_TITLE", year: 2027, tag: "ICLR 2027", authors: ["Hugues Vinzant", "COAUTHOR"], openreview: "OPENREVIEW_URL" }
+  manual: [                           // papers not on ORCID yet
   ]
 };
 
@@ -314,70 +429,220 @@ const PUBS = {
   load().then(p => { if (p.length) render(p); }).catch(() => {});   // on any failure, the static list stays
 })();
 
-/* ---------- Research figures (illustrative, synthetic, animated) ---------- */
+/* ---------- Section titles shift from grey to accent as their section reaches the reading line ---------- */
+(function(){
+  const secs = [...document.querySelectorAll('section')];
+  // Distance (px) over which a title fades back to the text colour: most of a screen, so the change is gradual
+  function update(){
+    const line = innerHeight * .4;
+    secs.forEach(s => {
+      const r = s.getBoundingClientRect();
+      const d = line < r.top ? r.top - line : line > r.bottom ? line - r.bottom : 0;
+      const f = Math.max(0, 1 - d / (innerHeight * .75));
+      s.querySelector('h2').style.setProperty('--f', f.toFixed(3));
+    });
+  }
+  addEventListener('scroll', update, { passive: true }); addEventListener('resize', update); update();
+})();
+
+/* ---------- Sections fade in as they enter; the section being read gets an accent title ---------- */
+(function(){
+  if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const secs = document.querySelectorAll('section');
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .12, rootMargin: '0px 0px -6% 0px' });
+  secs.forEach(sec => {
+    const items = sec.querySelectorAll(':scope > h2, :scope > p, :scope > .about, .thread, .entries > li');
+    items.forEach((el, i) => { el.classList.add('rv'); el.style.transitionDelay = Math.min(i, 6) * 70 + 'ms'; io.observe(el); });
+  });
+})();
+
+/* ---------- Research figures (illustrative, synthetic), animated and interactive ---------- */
 (function(){
   const NS = 'http://www.w3.org/2000/svg';
   let seed = 11; const r = () => { seed = (seed*16807) % 2147483647; return seed/2147483647; };
   const gw = (t, mu, s) => { let d = ((t - mu) % 1 + 1.5) % 1 - .5; return Math.exp(-(d*d)/(2*s*s)); };   // periodic bump
   const add = (svg, tag, attrs) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); svg.append(e); return e; };
-  const line = (fn, x0, w, y0, h) => { let d=''; for (let i=0;i<=60;i++){ const t=i/60; d += (i?'L':'M') + (x0+t*w).toFixed(1) + ',' + (y0+h-fn(t)*h).toFixed(1); } return d; };
+  const line = (fn, x0, w, y0, h) => { let d=''; for (let i=0;i<=48;i++){ const t=i/48; d += (i?'L':'M') + (x0+t*w).toFixed(1) + ',' + (y0+h-fn(t)*h).toFixed(1); } return d; };
+  const toSvg = (svg, e) => { const p = svg.createSVGPoint(); p.x = e.clientX; p.y = e.clientY; return p.matrixTransform(svg.getScreenCTM().inverse()); };
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const anims = [];
 
-  // Synergies: three patterns drift in time; every muscle trace is recomposed from them each frame
+  // Synergies, the classic way: K activations z(t) (left) × weight matrix W ∈ R^{A×K} (middle, one coloured
+  // column per synergy, each cell lit by W[a,k]·z_k now) = A muscle activations a(t) (right).
+  // Hover to highlight a synergy and see its share of each muscle. Press on a curve or a column to grab that
+  // synergy, then drag up or down to set its level; the drag keeps working outside the figure until you release.
   const syn = document.getElementById('fig-synergy');
   if (syn) {
-    const mu = [.15, .5, .8], sd = [.08, .1, .07];
-    const sPaths = [0,1,2].map(() => add(syn, 'path', { class: 'fig-strong' }));
-    const M = 14, W = Array.from({length: M}, () => [r(), r(), r()].map(x => x*x)), P = Array.from({length: M}, () => [r()*6, r()*6, r()*6]);
-    const mPaths = W.map(() => add(syn, 'path', { class: 'fig-faint' }));
-    add(syn, 'path', { d: 'M56 55 L66 55 M62 51 L66 55 L62 59', class: 'fig-faint', style: 'opacity:.7;stroke-width:1' });
-    anims.push(s => {
-      const shift = s * .06;
-      const S = [0,1,2].map(k => t => gw(t, mu[k] + shift, sd[k]));
-      sPaths.forEach((p, k) => p.setAttribute('d', line(S[k], 0, 50, 8 + k*34, 26)));
-      mPaths.forEach((p, m) => {
-        const w = W[m].map((x, k) => x * (.75 + .25*Math.sin(s*.5 + P[m][k])));
-        const tot = w[0]+w[1]+w[2] || 1;
-        p.setAttribute('d', line(t => (w[0]*S[0](t)+w[1]*S[1](t)+w[2]*S[2](t))/tot*1.4, 72, 88, 6 + m*6.6, 22));
+    const K = 4, A = 10, COL = ['var(--s1)','var(--s2)','var(--s3)','var(--s4)'];
+    const L = { x: 2, w: 58, y: 6, h: 100 }, MX = 74, CW = 10, RH = 10, TOP = 6, RX = 130, RW = 68;
+    const WIN = 6, M = 90;                      // seconds shown, samples per trace
+    const W = Array.from({length: A}, () => Array.from({length: K}, () => { const v = r(); return v < .55 ? 0 : .35 + .65*r(); }));
+    W.forEach(row => { if (row.every(v => v === 0)) row[Math.floor(r()*K)] = .6 + .4*r(); });
+    const P = Array.from({length: K}, () => Array.from({length: 3}, () => [ .7 + r()*1.4, r()*6.28, .5 + r() ]));
+    const zNat = (k, s) => { let v = 0; P[k].forEach(([f, ph, a]) => v += a*Math.sin(s*f + ph)); return 1/(1 + Math.exp(-1.6*v)); };
+    const yOf = v => L.y + L.h - v*L.h, vOf = y => Math.min(1, Math.max(0, (L.y + L.h - y)/L.h));
+
+    add(syn, 'path', { d: `M${L.x},${L.y}V${L.y+L.h}H${L.x+L.w}`, class: 'fig-axis' });
+    add(syn, 'text', { x: 64, y: 59, class: 'fig-op' }).textContent = '×';
+    add(syn, 'text', { x: 118, y: 59, class: 'fig-op' }).textContent = '=';
+    for (let a = 0; a < A; a++) add(syn, 'line', { x1: RX, x2: RX + RW, y1: TOP + a*RH + RH - 1.5, y2: TOP + a*RH + RH - 1.5, class: 'fig-base' });
+    COL.forEach((c, k) => add(syn, 'path', { d: `M${MX + k*CW + 1},${TOP - 3.5}h${CW - 3.2}`, style: `stroke:${c};stroke-width:1.6;stroke-linecap:round` }));
+    const cells = W.map((row, a) => row.map((w, k) => {
+      const y = TOP + a*RH;
+      add(syn, 'rect', { x: MX + k*CW, y, width: CW - 1.2, height: RH - 1.2, rx: 1.2, style: 'fill:none;stroke:var(--rule);stroke-width:.5' });
+      return add(syn, 'rect', { x: MX + k*CW, y, width: CW - 1.2, height: RH - 1.2, rx: 1.2, style: `fill:${COL[k]};opacity:0` });
+    }));
+    const contrib = W.map(() => add(syn, 'path', { style: 'stroke:none;opacity:0' }));
+    const al = W.map(() => add(syn, 'path', { style: 'fill:none;stroke:var(--ink);stroke-width:.9;opacity:.75;stroke-linejoin:round' }));
+    const zl = COL.map(c => add(syn, 'path', { style: `fill:none;stroke:${c};stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round` }));
+    const zd = COL.map(c => add(syn, 'circle', { r: 2, cx: L.x + L.w, style: `fill:${c}` }));
+    add(syn, 'rect', { x: 0, y: 0, width: 200, height: 112, class: 'fig-hit', style: 'cursor:grab' });
+
+    // a held synergy is recorded over time, so the traces show where it was held
+    const rec = Array.from({length: K}, () => []);          // [time, weight of the hold (0..1), held level]
+    let clock = 0, hover = -1, grab = -1, grabV = .5, hold = Array(K).fill(0), held = Array(K).fill(.5);
+    const zAt = (k, τ) => {
+      const R = rec[k]; let w = 0, v = 0;
+      if (R.length && τ >= R[0][0]) { let i = R.length - 1; while (i > 0 && R[i][0] > τ) i--; [, w, v] = R[i]; }
+      return w > 0 ? v*w + zNat(k, τ)*(1 - w) : zNat(k, τ);
+    };
+    const pick = p => {
+      if (p.x >= MX - 2 && p.x <= MX + K*CW) return Math.min(K - 1, Math.max(0, Math.floor((p.x - MX)/CW)));
+      let best = 1e9, kb = 0;
+      for (let k = 0; k < K; k++) { const d = Math.abs(yOf(zAt(k, clock)) - p.y); if (d < best) { best = d; kb = k; } }
+      return kb;
+    };
+    syn.addEventListener('pointermove', e => {
+      const p = toSvg(syn, e);
+      if (grab >= 0) grabV = vOf(p.y); else hover = pick(p);
+    });
+    syn.addEventListener('pointerdown', e => {
+      const p = toSvg(syn, e); grab = pick(p); hover = grab; grabV = vOf(p.y);
+      syn.setPointerCapture(e.pointerId); syn.style.cursor = 'grabbing'; e.preventDefault();
+    });
+    const release = () => { grab = -1; syn.style.cursor = ''; };
+    syn.addEventListener('pointerup', release); syn.addEventListener('pointercancel', release);
+    syn.addEventListener('pointerleave', () => { if (grab < 0) hover = -1; });
+
+    const tx = i => RX + RW*i/(M - 1), lx = i => L.x + L.w*i/(M - 1);
+    anims.push((_, dt) => {
+      dt = Math.min(dt, .05); clock += dt;
+      for (let k = 0; k < K; k++) {
+        const target = grab === k ? 1 : 0;
+        hold[k] += (target - hold[k]) * Math.min(1, dt*(target ? 12 : 2.5));
+        if (grab === k) held[k] += (grabV - held[k]) * Math.min(1, dt*16);
+        if (hold[k] > .001 || rec[k].length) rec[k].push([clock, hold[k] > .001 ? hold[k] : 0, held[k]]);
+        while (rec[k].length && rec[k][0][0] < clock - WIN - 1) rec[k].shift();
+      }
+      const times = Array.from({length: M}, (_, i) => clock - WIN + WIN*i/(M - 1));
+      const Z = Array.from({length: K}, (_, k) => times.map(τ => zAt(k, τ)));
+      const zNow = Z.map(row => row[M - 1]);
+      const focus = grab >= 0 ? grab : hover;
+      zl.forEach((p, k) => {
+        p.setAttribute('d', Z[k].map((v, i) => (i?'L':'M') + lx(i).toFixed(2) + ',' + yOf(v).toFixed(2)).join(''));
+        p.style.opacity = focus < 0 || k === focus ? 1 : .18;
+        p.style.strokeWidth = k === focus ? 2.2 : 1.4;
+      });
+      zd.forEach((c, k) => { c.setAttribute('cy', yOf(zNow[k]).toFixed(2)); c.style.opacity = focus < 0 || k === focus ? 1 : .2; c.setAttribute('r', k === grab ? 3 : 2); });
+      W.forEach((row, a) => row.forEach((w, k) => {
+        const lit = w * (.1 + .9*zNow[k]);
+        cells[a][k].style.opacity = (focus < 0 || k === focus ? lit : lit*.25).toFixed(2);
+      }));
+      al.forEach((p, a) => {
+        const y0 = TOP + a*RH + .5, h = RH - 2, yv = v => (y0 + h - Math.min(1, v/1.6)*h).toFixed(2);
+        p.setAttribute('d', times.map((_, i) => { let v = 0; for (let k = 0; k < K; k++) v += W[a][k]*Z[k][i]; return (i?'L':'M') + tx(i).toFixed(2) + ',' + yv(v); }).join(''));
+        const c = contrib[a];
+        if (focus >= 0 && W[a][focus] > 0) {
+          c.setAttribute('d', times.map((_, i) => (i?'L':'M') + tx(i).toFixed(2) + ',' + yv(W[a][focus]*Z[focus][i])).join('') + `L${RX + RW},${y0 + h}L${RX},${y0 + h}Z`);
+          c.style.fill = COL[focus]; c.style.opacity = .45;
+        } else c.style.opacity = 0;
       });
     });
   }
 
-  // Latent space: embeddings breathe around their clusters; one walk travels between them with a fading trail
+  // Latent manifold: a curved low-dimensional surface where walks with similar patterns sit together.
+  // Hover to move the probe exactly under the pointer and see its nearest walks; drag to rotate the manifold.
   const lat = document.getElementById('fig-latent');
   if (lat) {
-    const centers = [[42,38,1],[110,30,.8],[78,80,1.1],[130,82,.7]];
-    const gauss = () => { let u=0; for (let i=0;i<6;i++) u += r(); return u-3; };
+    const surf = (u, v) => [u*1.2, v*.9, .5*Math.sin(2.2*u)*Math.cos(1.6*v) + .2*u*v];
+    const SC = 50, CX = 80, CY = 57;
+    let yaw = .5, tilt = .62, vel = .25, dragging = false, last = null;
+    const proj = ([x, y, z]) => {
+      const c = Math.cos(yaw), s = Math.sin(yaw);
+      const x1 = x*c - y*s, y1 = x*s + y*c;
+      return [CX + x1*SC, CY - (z*Math.cos(tilt) - y1*Math.sin(tilt))*SC, y1];
+    };
+    const GU = 8, GV = 6, wires = [];
+    for (let i = 0; i <= GU; i++) wires.push({ el: add(lat, 'path', { class: 'fig-wire' }), f: j => [-1 + 2*i/GU, -1 + 2*j/24] });
+    for (let j = 0; j <= GV; j++) wires.push({ el: add(lat, 'path', { class: 'fig-wire' }), f: i => [-1 + 2*i/24, -1 + 2*j/GV] });
+    const gauss = () => { let s = 0; for (let i = 0; i < 6; i++) s += r(); return (s - 3)/3; };
     const pts = [];
-    centers.forEach(([cx, cy, s]) => { for (let i = 0; i < 30; i++) {
-      pts.push({ x: cx + gauss()*13*s, y: cy + gauss()*10*s, ph: r()*6.28, a: 1 + r()*2,
-                 el: add(lat, 'circle', { r: 2.1, class: 'fig-dot', style: 'opacity:.45' }) });
+    const PAL = ['var(--s1)','var(--s2)','var(--s3)','var(--s4)'];
+    [[-.6,-.5],[.55,-.45],[-.35,.55],[.6,.5]].forEach(([cu, cv], c) => { for (let i = 0; i < 22; i++) {
+      const u = Math.max(-1, Math.min(1, cu + gauss()*.3)), v = Math.max(-1, Math.min(1, cv + gauss()*.3));
+      pts.push({ p: surf(u, v), el: add(lat, 'circle', { r: 2.1, style: `fill:${PAL[c]};stroke:var(--bg);stroke-width:.5` }) });
     }});
-    const TRAIL = 26, trail = Array.from({length: TRAIL}, (_, i) => add(lat, 'circle', { r: 1.6, class: 'fig-dot' }));
-    const head = add(lat, 'circle', { r: 2.8, class: 'fig-dot' }), ring = add(lat, 'circle', { r: 7, class: 'fig-ring' });
-    // smooth closed path through the cluster centres
-    const route = [[42,38],[78,80],[130,82],[110,30]];
-    const cr = (p0,p1,p2,p3,t) => p1.map((_, i) => .5*((2*p1[i]) + (-p0[i]+p2[i])*t + (2*p0[i]-5*p1[i]+4*p2[i]-p3[i])*t*t + (-p0[i]+3*p1[i]-3*p2[i]+p3[i])*t*t*t));
-    const at = u => { const n = route.length, k = Math.floor(u) % n, t = u - Math.floor(u);
-      return cr(route[(k+n-1)%n], route[k], route[(k+1)%n], route[(k+2)%n], t); };
-    anims.push(s => {
-      pts.forEach(p => { p.el.setAttribute('cx', (p.x + p.a*Math.sin(s*.7 + p.ph)).toFixed(1)); p.el.setAttribute('cy', (p.y + p.a*Math.cos(s*.6 + p.ph*1.3)).toFixed(1)); });
-      const u = s * .18;
-      trail.forEach((c, i) => { const q = at(Math.max(0, u - (i+1)*.012)); c.setAttribute('cx', q[0].toFixed(1)); c.setAttribute('cy', q[1].toFixed(1)); c.style.opacity = (.55*(1 - i/TRAIL)).toFixed(2); });
-      const h = at(u);
-      head.setAttribute('cx', h[0].toFixed(1)); head.setAttribute('cy', h[1].toFixed(1));
-      ring.setAttribute('cx', h[0].toFixed(1)); ring.setAttribute('cy', h[1].toFixed(1));
+    const KN = 5, links = Array.from({length: KN}, () => add(lat, 'line', { class: 'fig-link' }));
+    const ring = add(lat, 'circle', { r: 6, class: 'fig-ring' }), head = add(lat, 'circle', { r: 2.4, style: 'fill:var(--ink)' });
+    const hit = add(lat, 'rect', { x: 0, y: 0, width: 160, height: 110, class: 'fig-hit', style: 'cursor:grab' });
+    let pointer = null, pu = 0, pv = 0;
+    // surface point under the pointer: coarse grid search, then a local refinement
+    function pick(px, py){
+      let best = 1e9, bu = 0, bv = 0;
+      for (let i = 0; i <= 30; i++) for (let j = 0; j <= 30; j++) {
+        const u = -1 + i/15, v = -1 + j/15, q = proj(surf(u, v)), d = (q[0]-px)**2 + (q[1]-py)**2;
+        if (d < best) { best = d; bu = u; bv = v; }
+      }
+      for (let step = 1/30; step > 1/400; step /= 2) {
+        for (const [du, dv] of [[step,0],[-step,0],[0,step],[0,-step]]) {
+          const u = Math.max(-1, Math.min(1, bu + du)), v = Math.max(-1, Math.min(1, bv + dv)), q = proj(surf(u, v)), d = (q[0]-px)**2 + (q[1]-py)**2;
+          if (d < best) { best = d; bu = u; bv = v; }
+        }
+      }
+      return [bu, bv];
+    }
+    hit.addEventListener('pointerdown', e => { dragging = true; last = toSvg(lat, e); hit.setPointerCapture(e.pointerId); hit.style.cursor = 'grabbing'; });
+    hit.addEventListener('pointermove', e => {
+      const p = toSvg(lat, e);
+      if (dragging) {
+        yaw += (p.x - last.x) * .03; vel = (p.x - last.x) * 1.2;
+        tilt = Math.max(.15, Math.min(1.35, tilt + (p.y - last.y) * .02));
+        last = p;
+      } else pointer = [p.x, p.y];
+    });
+    const end = () => { dragging = false; hit.style.cursor = 'grab'; };
+    hit.addEventListener('pointerup', end); hit.addEventListener('pointercancel', end);
+    hit.addEventListener('pointerleave', () => { if (!dragging) pointer = null; });
+    anims.push((s, dt) => {
+      if (!dragging) { const auto = pointer ? 0 : .25; vel += (auto - vel) * Math.min(1, dt*2); yaw += vel*dt; }
+      wires.forEach(w => { let d = ''; for (let i = 0; i <= 24; i++) { const [u, v] = w.f(i), q = proj(surf(u, v)); d += (i?'L':'M') + q[0].toFixed(1) + ',' + q[1].toFixed(1); } w.el.setAttribute('d', d); });
+      if (pointer && !dragging) [pu, pv] = pick(pointer[0], pointer[1]);
+      else if (!pointer) { const a = s*.35, tu = .75*Math.sin(a), tv = .7*Math.sin(1.7*a + .6), k = Math.min(1, dt*3); pu += (tu - pu)*k; pv += (tv - pv)*k; }
+      const P = surf(pu, pv), hq = proj(P), scr = pts.map(p => proj(p.p));
+      const ds = pts.map((p, i) => [Math.hypot(p.p[0]-P[0], p.p[1]-P[1], p.p[2]-P[2]), i]).sort((a, b) => a[0]-b[0]);
+      const near = new Set(ds.slice(0, KN).map(d => d[1]));
+      pts.forEach((p, i) => { const q = scr[i], depth = .55 + .45*Math.max(-1, Math.min(1, -q[2]));
+        p.el.setAttribute('cx', q[0].toFixed(1)); p.el.setAttribute('cy', q[1].toFixed(1));
+        p.el.setAttribute('r', near.has(i) ? 3.2 : 2.1);
+        p.el.style.opacity = (near.has(i) ? 1 : .5*depth + .25).toFixed(2); });
+      ds.slice(0, KN).forEach(([, i], j) => { const q = scr[i];
+        links[j].setAttribute('x1', hq[0].toFixed(1)); links[j].setAttribute('y1', hq[1].toFixed(1));
+        links[j].setAttribute('x2', q[0].toFixed(1)); links[j].setAttribute('y2', q[1].toFixed(1)); });
+      [head, ring].forEach(c => { c.setAttribute('cx', hq[0].toFixed(1)); c.setAttribute('cy', hq[1].toFixed(1)); });
     });
   }
 
-  if (reduce) { anims.forEach(a => a(0)); return; }
+  if (reduce) { anims.forEach(a => a(0, 1)); return; }
   let visible = true;
   const sec = document.getElementById('research');
   if (sec && 'IntersectionObserver' in window) new IntersectionObserver(es => { visible = es[0].isIntersecting; }).observe(sec);
-  const t0 = performance.now();
-  anims.forEach(a => a(0));
-  (function loop(now){ if (visible) { const s = Math.max(0, now - t0)/1000; anims.forEach(a => a(s)); } requestAnimationFrame(loop); })(t0);
+  const t0 = performance.now(); let prev = t0;
+  anims.forEach(a => a(0, 1));
+  (function loop(now){
+    const dt = Math.min(.1, Math.max(0, now - prev)/1000); prev = now;
+    if (visible) { const s = Math.max(0, now - t0)/1000; anims.forEach(a => a(s, dt)); }
+    requestAnimationFrame(loop);
+  })(t0);
 })();
 
 /* ---------- 3D gait trajectory (hip, knee, ankle) ---------- */
@@ -422,7 +687,7 @@ const PUBS = {
   let size = 0, dpr = 1, base = [42,85,163], hot = [20,90,235], rgb = base, hover = 0, hoverTarget = 0;
   const hex = h => { h = h.trim().replace('#',''); return [0,2,4].map(i => parseInt(h.slice(i,i+2),16)); };
   function readColor(){
-    const cs = getComputedStyle(document.documentElement);
+    const cs = getComputedStyle(cv);
     base = hex(cs.getPropertyValue('--accent')); hot = hex(cs.getPropertyValue('--accent-hot'));
   }
   cv.addEventListener('pointerenter', () => hoverTarget = 1);
@@ -446,22 +711,26 @@ const PUBS = {
     const n = TRAIL*STEPS, CH = 3;                    // draw in short chunks, each with its own brightness
     const pts = [];
     for (let i = 0; i <= n; i++) pts.push(project(pose(u - TRAIL + i/STEPS), theta, R));
+    const k = Math.max(1, size/300);
     for (let i = 0; i < n; i += CH){
       const age = (n - i - CH/2)/STEPS;               // strides behind the pen
       const w = Math.exp(-(FADE - .35*hover)*age);    // 1 at the pen, fading behind it (longer tail on hover)
       ctx.strokeStyle = `rgba(${rgb[0]},${rgb[1]},${rgb[2]},${w.toFixed(3)})`;
+      if (w > .3) { ctx.shadowColor = `rgba(${rgb[0]},${rgb[1]},${rgb[2]},${(.9*w).toFixed(3)})`; ctx.shadowBlur = (8 + 10*hover) * w * k; } else ctx.shadowBlur = 0;
       ctx.lineWidth = (.6 + (1.6 + .5*hover)*w) * Math.max(1, size/300);
       ctx.beginPath(); ctx.moveTo(pts[i][0], pts[i][1]);
       for (let j = i+1; j <= Math.min(n, i+CH); j++) ctx.lineTo(pts[j][0], pts[j][1]);
       ctx.stroke();
     }
     const prev = pts[n];
+    ctx.shadowBlur = 18*k; ctx.shadowColor = `rgb(${rgb[0]},${rgb[1]},${rgb[2]})`;
     ctx.fillStyle = `rgb(${rgb[0]},${rgb[1]},${rgb[2]})`;
     ctx.beginPath(); ctx.arc(prev[0], prev[1], Math.max(2.6, size/110), 0, 2*Math.PI); ctx.fill();
+    ctx.shadowBlur = 0;
   }
 
   // Drag to rotate; the spin resumes with a little inertia after release.
-  let yaw = .7, vel = ROT, dragging = false, lastX = 0, lastT = 0, tiltTarget = TILT;
+  let yaw = .7, vel = ROT, dragging = false, lastX = 0, lastT = 0;
   cv.addEventListener('pointerdown', e => { dragging = true; lastX = e.clientX; lastT = performance.now(); cv.classList.add('dragging'); cv.setPointerCapture(e.pointerId); });
   cv.addEventListener('pointermove', e => {
     if (!dragging) return;
@@ -472,6 +741,15 @@ const PUBS = {
   const end = () => { dragging = false; cv.classList.remove('dragging'); };
   cv.addEventListener('pointerup', end); cv.addEventListener('pointercancel', end);
 
+  // Simple scroll exit: the hero fades out as you scroll past it.
+  const band = document.getElementById('hero-band'), wrap = band && band.querySelector('.hero-wrap');
+  function scrollFx(){
+    if (!band) return 0;
+    const p = Math.min(1, Math.max(0, scrollY / band.offsetHeight));
+    if (wrap) wrap.style.opacity = (1 - p).toFixed(3);
+    return p;
+  }
+
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (reduce) {
     const still = () => { draw(TRAIL + .62, yaw); if (dragging) requestAnimationFrame(still); };
@@ -481,8 +759,9 @@ const PUBS = {
   const t0 = performance.now(); let prevNow = t0;
   (function loop(now){
     const s = Math.max(0, now - t0)/1000, dt = Math.max(0, now - prevNow)/1000; prevNow = now;
+    const p = scrollFx();
     if (!dragging) { vel += (ROT - vel) * Math.min(1, dt*1.5); yaw += vel*dt; }
-    draw(TRAIL + s/STRIDE, yaw);
+    if (p < 1) draw(TRAIL + s/STRIDE, yaw);   // skip drawing once the hero is off-screen
     requestAnimationFrame(loop);
   })(t0);
 })();
